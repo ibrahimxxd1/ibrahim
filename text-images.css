@@ -1,0 +1,61 @@
+         
+        body{
+                background-color: white;
+                margin:0;
+            }
+            
+            .izuki-1{
+                width: 80px;
+                border-radius:50%;
+                text-align: center;
+                margin-left: 5px;
+                margin-right: 15px;
+            }
+           .tweet-2{
+            width: 180px;
+            height: 30px;
+            border-style: none;
+            outline-style: none;
+            margin-top: 25px;
+            vertical-align: top;
+            font-family:arial;
+            font-size: large;
+            font-weight: bold;
+            margin-right: 0px;
+
+
+           }
+           .Tweet-3{
+            vertical-align: top;
+            margin-top: 30px;
+            margin-right: 35px;
+            padding:5px 20px;
+            background-color: rgb(2, 158, 255);
+            cursor: pointer;
+            border-radius: 8px;
+            border-style: none;
+            color:white;
+            font-family: arial;
+            font-weight: bold;
+           }
+           
+           .email-bar{
+            position: fixed;
+            top:110px;
+            left:20px;
+            border-style: solid;
+            outline-style: none;
+            width:190px;
+            height: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+
+
+           }
+           .para-1{
+            margin-top: 60px;
+            margin-left: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+           
+           }
+          

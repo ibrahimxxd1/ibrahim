@@ -1,0 +1,17 @@
+.pa-1{
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.pa-2{
+    font-family:montserrat ;
+    font-size: large;
+    text-align: center;
+    
+
+}
+.pa-3{
+    text-decoration: underline;
+}
