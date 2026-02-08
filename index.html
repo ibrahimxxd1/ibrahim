@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ibrahim's shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+    
+        .nav-1 {
+            background-color: white;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-1 a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        nav a:hover {
+            color: #666;
+        }
+        
+        .nav-1 button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-1 button:hover {
+            background-color: #f8f8f8;
+        }
+        
+        .nav-1 input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 300px;
+        }
+        
+        .nav-1 input:focus {
+            outline: none;
+            border-color: #999;
+        }
+        
+        .icon-buttons {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .icon-btn:hover {
+            background-color: #f8f8f8;
+        }
+
+    
+        .nav-2 {
+            background-color: white;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .nav-2 a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+       
+        .product-card {
+            background-color: white;
+            border: 3px solid #dc3545;
+            border-radius: 20px;
+            padding: 15px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .promo-badge {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            background-color: #dc3545;
+            border: none;
+            cursor: pointer;
+            padding: 8px 20px;
+            color: white;
+            font-weight: bold;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            z-index: 10;
+            font-size: 14px;
+        }
+
+        .promo-badge:hover {
+            opacity: 0.9;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        
+        .product-category {
+            color: #dc3545;
+            font-size: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            min-height: 40px;
+        }
+
+       
+        .price-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .price-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .current-price-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .current-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .discount-badge {
+            background-color: #dc3545;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .cart-button {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        
+        @media (max-width: 1200px) {
+            .products-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav-1">
+        <a>📍 find a store</a>
+        <a>⚙️ configure your Pc</a>
+        <button>％ discounts</button>
+        <button>🏷️ news</button>
+        <input type="text" placeholder="search...">
+        <div class="icon-buttons">
+            <button class="icon-btn">🔆</button>
+            <button class="icon-btn-2">
+                🙍‍♂️
+                <a href="https://setupgame.ma/sign-up/" target="_blank">
+                    <span class="tooltiptext">sign up</span>
+                </a> 
+            </button>
+            <button>
+                🛒
+                <a href="https://setupgame.ma/categorie-produit/setup-gamer-complet/" target="_blank">
+                    <span>Shop</span>
+                </a>
+            </button>
+        </div>
+    </nav>
+
+    <nav class="nav-2">
+        <a>Pc Gamer ⤵</a>
+        <a>Pc par jeux ⤵</a>
+        <a>Pc par secteur ⤵</a>
+        <a>Setup complete ⤵</a>
+        <a>Pc portables ⤵</a>
+        <a>Composants ⤵</a>
+        <a>Chaise & bureau ⤵</a>
+        <a>Moniteurs ⤵</a>
+        <a>Périphérique ⤵</a>
+    </nav>
+    <div class="products-container">
+        
+        <div class="product-card">
+            <button class="promo-badge">Promo</button>
+            <img src="setup-1.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">SETUP GAMER R5 3400G/8Go/256Go + G242L E14 + HPG100</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="old-price">4,549.00MAD</div>
+                    <div class="current-price-wrapper">
+                        <span class="current-price">4,349.00MAD</span>
+                        <span class="discount-badge">-4%</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="setup-2.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">SETUP GAMER R5 5600-RTX 5070 + 255XF + GK30</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="current-price-wrapper">
+                        <span class="current-price">16,199.00MAD</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <button class="promo-badge">Promo</button>
+            <img src="setup-3.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">MSI Thin 15 B13UC-3233XMA – Core i7 13th, RTX 3050, 16Go, 512Go</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="old-price">10,499.00MAD</div>
+                    <div class="current-price-wrapper">
+                        <span class="current-price">9,299.00MAD</span>
+                        <span class="discount-badge">-11%</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <button class="promo-badge">Promo</button>
+            <img src="setup-4.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">ASUS ROG Strix G15 G513RC-HF210 – Ryzen 7-6800H, RTX 3050, 16GB, 512GB</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="old-price">12,999.00MAD</div>
+                    <div class="current-price-wrapper">
+                        <span class="current-price">11,699.00MAD</span>
+                        <span class="discount-badge">-10%</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <button class="promo-badge">Promo</button>
+            <img src="setup-5.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">SETUP GAMER R5 5600/RTX5050/16Go/500Go + HP27IPS100 + HPG100</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="old-price">10,049.00MAD</div>
+                    <div class="current-price-wrapper">
+                        <span class="current-price">8,549.00MAD</span>
+                        <span class="discount-badge">-15%</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <button class="promo-badge">Promo</button>
+            <img src="setup-1.webp" class="product-image" alt="Gaming Setup">
+            
+            <div class="product-category">Setup Game</div>
+            <div class="product-title">SETUP GAMER R5 5500-RTX 5050 + HP27IPS100 + HPG100</div>
+            
+            <div class="price-section">
+                <div class="price-info">
+                    <div class="old-price">9,449.00MAD</div>
+                    <div class="current-price-wrapper">
+                        <span class="current-price">8,649.00MAD</span>
+                        <span class="discount-badge">-8%</span>
+                    </div>
+                </div>
+                <button class="cart-button">🛒</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
