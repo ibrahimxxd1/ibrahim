@@ -499,7 +499,35 @@
             .contact-link {
                 width: 100%;
             }
-        }
+            .project-card {
+              padding: 2rem;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              background: #ffffff;
+              transition: transform 0.3s ease;
+            }
+            
+            .project-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            
+            .tech-tags span {
+              display: inline-block;
+              background: #f4f4f4;
+              padding: 4px 10px;
+              margin-right: 8px;
+              border-radius: 4px;
+              font-size: 0.8rem;
+              color: #555;
+            }
+            
+            .project-links {
+              margin-top: 1.5rem;
+              display: flex;
+              gap: 1rem;
+            }
+                    }
     </style>
 </head>
 <body>
@@ -605,6 +633,22 @@
                     <a href="https://ibrahimxxd1.github.io/cloths-shop/" class="project-link" target="_blank">View Details</a>
                 </div>
             </div>
+            <div class="project-card">
+                  <h3>Ember & Harvest</h3>
+                  <p>A sophisticated, responsive restaurant website designed with a focus on immersive typography and a warm, earthy user interface. Features include smooth scroll navigation, a custom reservation layout, and interactive menu components.</p>
+                
+                  <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3 (Custom)</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                  </div>
+                
+                  <div class="project-links">
+                    <a href="https://ibrahimxxd1.github.io/resto/" target="_blank" class="btn-live">View Live Project</a>
+                    <a href="YOUR_GITHUB_REPO_LINK" target="_blank" class="btn-source">View Source Code</a>
+          </div>
+</div>
 
         </div>
     </section>
