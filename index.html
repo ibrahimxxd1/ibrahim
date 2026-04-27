@@ -230,6 +230,7 @@
         .project-card:nth-child(3) { animation-delay: 0.3s; }
         .project-card:nth-child(4) { animation-delay: 0.4s; }
         .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
 
         .project-card:hover {
             border-color: var(--secondary);
@@ -354,7 +355,6 @@
         .skill-box:nth-child(2) { animation-delay: 0.2s; }
         .skill-box:nth-child(3) { animation-delay: 0.3s; }
         .skill-box:nth-child(4) { animation-delay: 0.4s; }
-        .skill-box:nth-child(5) { animation-delay: 0.5s; }
 
         .skill-box:hover {
             background: rgba(14, 20, 45, 1);
@@ -436,70 +436,24 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem 3%;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-
-            .hero {
-                padding: 6rem 3% 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .contact-link {
-                width: 100%;
-            }
-           
+            nav { padding: 1rem 3%; flex-direction: column; gap: 1rem; }
+            nav ul { gap: 1rem; font-size: 0.85rem; }
+            .hero { padding: 6rem 3% 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .cta-buttons { flex-direction: column; gap: 1rem; }
+            .btn { width: 100%; }
+            .section-title { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-links { flex-direction: column; gap: 1rem; }
+            .contact-link { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -534,7 +488,7 @@
                 <div class="project-content">
                     <span class="project-tag">E-Commerce</span>
                     <h3 class="project-title">Gaming Setup Shop</h3>
-                    <p class="project-desc">A modern e-commerce platform showcasing gaming PC setups with product cards, pricing, discount badges, and shopping cart functionality. Features responsive grid layout and hover animations.</p>
+                    <p class="project-desc">A modern e-commerce platform showcasing gaming PC setups with product cards, pricing, discount badges, and shopping cart functionality.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -549,7 +503,7 @@
                 <div class="project-content">
                     <span class="project-tag">Education</span>
                     <h3 class="project-title">E-Learning Platform</h3>
-                    <p class="project-desc">Interactive learning platform with course cards for HTML, CSS, and JavaScript. Features navigation menu, tutorial buttons, exercises, quizzes, and integrated login system with modern UI.</p>
+                    <p class="project-desc">Interactive learning platform with course cards for HTML, CSS, and JavaScript. Features navigation menu, tutorial buttons, exercises, and quizzes.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -564,7 +518,7 @@
                 <div class="project-content">
                     <span class="project-tag">Authentication</span>
                     <h3 class="project-title">User Registration Form</h3>
-                    <p class="project-desc">Comprehensive user registration and login interface with form validation, background imagery, and styled input fields. Includes personal information collection and secure password handling.</p>
+                    <p class="project-desc">Comprehensive user registration and login interface with form validation, background imagery, and styled input fields.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -579,7 +533,7 @@
                 <div class="project-content">
                     <span class="project-tag">E-Commerce</span>
                     <h3 class="project-title">MaxPC Gaming Store</h3>
-                    <p class="project-desc">Advanced gaming PC store with category navigation, product showcases, and multi-section layout. Features product cards with images, category filtering, and interactive hover effects.</p>
+                    <p class="project-desc">Advanced gaming PC store with category navigation, product showcases, and multi-section layout.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -589,38 +543,36 @@
                 </div>
             </div>
 
-            <!-- NEW PROJECT -->
             <div class="project-card">
                 <div class="project-image">👔</div>
                 <div class="project-content">
                     <span class="project-tag">Fashion & Retail</span>
                     <h3 class="project-title">LUXE Clothing Store</h3>
-                    <p class="project-desc">Premium clothing store with an elegant dark and gold aesthetic. Features a curated product grid with 11 items, hover animations, about section with brand highlights, business hours, and social links.</p>
+                    <p class="project-desc">Premium clothing store with an elegant dark and gold aesthetic. Features a curated product grid, hover animations, and about section.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
                         <span class="tech-badge">Animations</span>
-                        <span class="tech-badge">Responsive</span>
                     </div>
                     <a href="https://ibrahimxxd1.github.io/cloths-shop/" class="project-link" target="_blank">View Details</a>
                 </div>
             </div>
+
             <div class="project-card">
-            <div class="project-image">🍽️</div>
-            <div class="project-content">
-                <span class="project-tag">Restaurant</span>
-                <h3 class="project-title">Ember & Harvest</h3>
-                <p class="project-desc">A sophisticated, responsive restaurant website designed with a focus on immersive typography and a warm, earthy user interface. Features include smooth scroll navigation, a custom reservation layout, and interactive menu components.</p>
-                <div class="project-tech">
-                    <span class="tech-badge">HTML5</span>
-                    <span class="tech-badge">CSS3</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Responsive</span>
+                <div class="project-image">🍽️</div>
+                <div class="project-content">
+                    <span class="project-tag">Restaurant</span>
+                    <h3 class="project-title">Ember & Harvest</h3>
+                    <p class="project-desc">A sophisticated, responsive restaurant website designed with a focus on immersive typography and a warm, earthy user interface. Features smooth scroll navigation and custom reservation layout.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Responsive</span>
+                    </div>
+                    <a href="https://ibrahimxxd1.github.io/resto/" class="project-link" target="_blank">View Details</a>
                 </div>
-                <a href="https://ibrahimxxd1.github.io/resto/" class="project-link" target="_blank">View Details</a>
-    </div>
-</div>
-</div>
+            </div>
 
         </div>
     </section>
@@ -651,7 +603,7 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <p>I'm a passionate web developer focused on creating beautiful, functional, and user-friendly web experiences. With expertise in frontend development, I specialize in building responsive websites and interactive applications that engage users.</p>
-            <p>My projects showcase my ability to design and implement modern web solutions, from e-commerce platforms to educational interfaces. I'm committed to clean code, thoughtful design, and continuous learning in web development.</p>
+            <p>My projects showcase my ability to design and implement modern web solutions, from e-commerce platforms to educational interfaces. I'm committed to clean code, thoughtful design, and continuous learning.</p>
         </div>
     </section>
 
